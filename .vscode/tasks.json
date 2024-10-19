@@ -1,0 +1,48 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run",
+			"type": "shell",
+			"command": "make",
+			"args": [
+				"${relativeFileDirname}/${fileBasenameNoExtension}.run"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Task to Run the project using Makefile",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [],
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "dedicated"
+			}
+		},
+
+		{
+			"label": "Build",
+			"type": "shell",
+			"command": "make",
+			"args": [
+				"${relativeFileDirname}/${fileBasenameNoExtension}.exe"
+			],
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "Task to build the project using Makefile",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		}
+	]
+}
+
